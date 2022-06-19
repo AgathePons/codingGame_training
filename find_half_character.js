@@ -11,3 +11,6 @@
  console.error('code to find', codeToFind);
  
  console.log(String.fromCharCode(codeToFind));
+
+ // réponse alternative sur une ligne
+ // print(String.fromCharCode(s.charCodeAt()/2|0))
