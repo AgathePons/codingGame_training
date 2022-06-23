@@ -1,3 +1,5 @@
+// on reçoit en string des défibrillateurs avec des infos séparées par un ';' dont le nom,la longitude et la latitude en degrés. On reçoit une position (lon et lat en deg), on doit sortir lenom du défibrillateur le plus proche
+
 const LON = readline();
 const LAT = readline();
 console.error(`LON: ${LON} and LAT: ${LAT}`);

@@ -16,8 +16,4 @@
      console.error(evenNumber);
  }
  console.error(evenNumbers);
- 
- // Write an answer using console.log()
- // To debug: console.error('Debug messages...');
- 
  console.log(evenNumbers.reduce((prevValue, curValue) => prevValue + curValue, 0));
