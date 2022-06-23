@@ -4,8 +4,6 @@
 
  const s = readline();
 
- // Write an answer using console.log()
- // To debug: console.error('Debug messages...');
  console.error('code :', s.charCodeAt(0));
  let string = '';
  for (let i = 0; i < s.length; i++) {

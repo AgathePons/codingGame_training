@@ -1,11 +1,6 @@
 // Pour un jeu de températures données, trouver la plus proche de 0.
 // Si pas de température, alors 0
 
-/**
- * Auto-generated code below aims at helping you parse
- * the standard input according to the problem statement.
- **/
-
  const n = parseInt(readline()); // the number of temperatures to analyse
  var inputs = readline().split(' ');
  let posTemps = [];
