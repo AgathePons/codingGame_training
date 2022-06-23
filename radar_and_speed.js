@@ -63,8 +63,5 @@ DF-857-ZR A21-55 1620043835000 */
      }
  }
  console.error(plateToReport);
- 
- // Write an answer using console.log()
- // To debug: console.error('Debug messages...');
  plateToReport.forEach(element => console.log(element));
  
