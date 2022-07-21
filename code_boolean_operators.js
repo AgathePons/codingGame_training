@@ -1,4 +1,4 @@
-// https://www.codingame.com/ide/puzzle/logic-gates
+// logic-gates
 
 const n = parseInt(readline());
 const m = parseInt(readline());
