@@ -19,6 +19,7 @@ const isMatching = string.match(/[a-z]/g); // true / false
 // UTF-16 / unicode code
 const characterCodeUTF = string.charCodeAt(0); // index 0 of the string
 const characterCodeUnicode = string.codePointAt(0); // index 0 of the string
+const characterFromCode = String.fromCharCode(65); // --> A
 
 // uppercase / lowercase
 const lowerCaseString = string.toLowerCase();
