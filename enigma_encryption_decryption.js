@@ -1,3 +1,4 @@
+
 const operation = readline();
 const pseudoRandomNumber = parseInt(readline());
 const alphabet = [];
@@ -42,13 +43,19 @@ const decodeRotor = (rotor, letters) => {
 const encodeMsg = (msg, num) => {
     const messageLetters = msg.split('');
     // transform letters
-    //! modify this part to handle loop on alphabet
     const codedLetter = [];
     let counter = 0;
+    
     for (const letter of messageLetters) {
-        //console.error(`letter: ${letter}, code: ${letter.charCodeAt(0)} + ${num} + ${counter}`);
-        const letterToFind = String.fromCharCode(letter.charCodeAt(0) + num + counter);
-        //console.error('letterToFind', letterToFind);
+        indexToFind = (alphabet.indexOf(letter) + num + counter) % 26;
+
+        /* console.error(`
+            letter: ${letter}, 
+            code: ${alphabet.indexOf(letter)} + ${num} + ${counter} 
+            = ${alphabet.indexOf(letter) + num + counter} ==> ${indexToFind % 26}
+        `); */
+        
+        const letterToFind = alphabet[indexToFind];
         codedLetter.push(letterToFind);
         counter ++;
     }
@@ -75,12 +82,24 @@ const decodeMsg = (msg, num) => {
     const decodedLetter = [];
     let counter = 0;
     for (const letter of deRotoredFirst) {
-        //! modify this part to handle loop on alphabet
-        //console.error(`letter: ${letter}, code: ${letter.charCodeAt(0)} - ${num} - ${counter}`);
-        const letterToFind = String.fromCharCode(letter.charCodeAt(0) - num - counter);
-        //console.error('letterToFind', letterToFind);
+        calcIndex = (alphabet.indexOf(letter) - num - counter) % 26;
+        if (calcIndex < 0) {
+            indexToFind = 26 + calcIndex;
+        } else {
+            indexToFind = calcIndex;
+        }
+
+        /* console.error(`
+            letter: ${letter}, 
+            code: ${alphabet.indexOf(letter)} - ${num} - ${counter} 
+            = ${alphabet.indexOf(letter) - num - counter} 
+            ==> ${calcIndex % 26} ==> ${indexToFind}
+        `); */
+
+        const letterToFind = alphabet[indexToFind];
         decodedLetter.push(letterToFind);
         counter ++;
+
     }
     // return result
     return decodedLetter.join('');
@@ -92,3 +111,4 @@ if (operation === 'ENCODE') {
 } else if (operation === 'DECODE') {
     console.log(decodeMsg(message, pseudoRandomNumber));
 }
+
