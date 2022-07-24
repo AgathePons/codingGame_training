@@ -1,0 +1,7 @@
+Agathe Pons	silver spoon	150	2
+Agathe Pons	sword	550	1
+Bob l'Éponge	swimsuit	30	1
+Agathe Pons	magic wand	50	5
+John Doe	knife	50	2
+John Doe	pair of pants	15	3
+Bob l'Éponge	flip flop	5	2
