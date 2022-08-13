@@ -35,3 +35,7 @@ const allIByA = string.replaceAll('i', 'a');
 
 // search in string
 const isSimpleIncluded = string.includes('simple'); // true / false
+
+// remove blank before and after a string
+const myString = '   something    ';
+const cleanString = myString.trim();
