@@ -17,7 +17,7 @@ for (let i = 0; i < N; i++) {
 console.error('extensions', extensions);
 console.error('types', types);
 
-const regex = /\.\w{3,4}.?.*/g;
+const regex = /\.\w{3,4}.?.*/g; // --> /\.\w{2,10}+$/gm
 
 for (let i = 0; i < Q; i++) {
     const FNAME = readline(); // One file name per line.
