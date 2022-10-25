@@ -1,3 +1,3 @@
 # Training
 
-some algorithm exercises
+some algorithm exercises & tips
